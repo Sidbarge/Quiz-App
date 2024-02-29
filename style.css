@@ -116,9 +116,12 @@ input[type="radio"] {
     margin-bottom: 20px;
     transition: opacity 0.3s ease;
 }
-
+.startOver.deactive{
+    display: none;
+    pointer-events: none;
+}
 .result.deactive {
-    opacity: 0;
+    display: none;
     pointer-events: none;
 }
 
@@ -151,6 +154,19 @@ input[type="radio"] {
 .result ol li.incorrect {
     color: #ff0000;
     /* Red color for incorrect answers */
+}
+.startbtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.startOver{
+    width: 150px;
+    height: 50px;
+}
+
+.startOver:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive adjustments */

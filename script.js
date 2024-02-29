@@ -2,7 +2,9 @@ const form = document.querySelector("form");
 const btnNext = document.querySelector("#next");
 const btnPrev = document.querySelector("#prev");
 const resultScreen=document.querySelector(".result");
+const startOver=document.querySelector('.startOver')
 resultScreen.classList.add("deactive")
+startOver.classList.add('deactive')
 let randomQues=[]
 let marks = 0;
 const quiz = [
@@ -227,6 +229,7 @@ let submitQuiz=()=>{
     let submitbtn=document.querySelector("[data-submitbtn]")
     resultScreen.classList.remove('deactive')
     submitbtn.classList.add("deactive")
+    startOver.classList.remove('deactive')
     totalMarks()
 }
 
