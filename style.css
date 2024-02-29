@@ -108,23 +108,38 @@ input[type="radio"] {
 }
 
 /* Result screen styling */
+/* Add animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .result {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Start with opacity 0 */
+    animation: slideIn 0.5s forwards; /* Apply animation */
 }
-.startOver.deactive{
-    display: none;
-    pointer-events: none;
-}
+
 .result.deactive {
     display: none;
     pointer-events: none;
 }
 
+
+.startOver.deactive{
+    display: none;
+    pointer-events: none;
+}
 .result h3 {
     font-size: 20px;
     color: #333;
