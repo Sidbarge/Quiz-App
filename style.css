@@ -160,4 +160,14 @@ input[type="radio"] {
     .result {
         padding: 15px;
     }
+    para{
+        font-size: 16px;
+    }
+    *{
+        font-weight: 600;
+        
+    }
+    .result{
+        font-size: 14px;
+    }
 }
