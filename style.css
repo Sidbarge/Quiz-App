@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    /* overflow: auto; */
+} 
 
 /* Body styles */
 body {
@@ -11,10 +16,12 @@ body {
     background-color: #f8f9fa;
     padding: 20px;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     flex-direction: column;
 }
+
 /* Form styles */
 form {
     background-color: #fff;
@@ -65,7 +72,7 @@ button[data-submitbtn].deactive {
 }
 
 .result.deactive {
-    opacity: 0;
+    display: none;
     pointer-events: none;
 }
 
@@ -88,13 +95,16 @@ input[type="radio"] {
     margin-right: 8px;
 }
 
-button, input[type="radio"] {
+button,
+input[type="radio"] {
     font-size: 16px;
 }
 
 .para {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
 }
 
 /* Result screen styling */
@@ -134,16 +144,20 @@ button, input[type="radio"] {
 }
 
 .result ol li.correct {
-    color: #008000; /* Green color for correct answers */
+    color: #008000;
+    /* Green color for correct answers */
 }
 
 .result ol li.incorrect {
-    color: #ff0000; /* Red color for incorrect answers */
+    color: #ff0000;
+    /* Red color for incorrect answers */
 }
 
 /* Responsive adjustments */
 @media only screen and (max-width: 600px) {
-    form, .result {
+
+    form,
+    .result {
         padding: 15px;
     }
 }
