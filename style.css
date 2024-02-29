@@ -1,23 +1,148 @@
-/* *{
-    padding: 0;
+/* General reset */
+* {
     margin: 0;
-} */
-input{
-    /* display: inline; */
+    padding: 0;
+    box-sizing: border-box;
 }
-p{
-    display: inline;
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
 }
-form.deactive{
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+/* Form styles */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+form.deactive {
+    display: none;
+    pointer-events: none;
+}
+
+/* Input styles */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Button styles */
+button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[data-submitbtn].deactive {
     display: none;
 }
-button[data-submitbtn].deactive{
-    display: none;
-    
+
+/* Result screen styles */
+.result {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
 }
-.result.deactive{
-    display: none;
+
+.result.deactive {
+    opacity: 0;
+    pointer-events: none;
 }
-ol li{
+
+/* List styles */
+ol {
     list-style-type: lower-roman;
+}
+
+/* Additional styling */
+h3 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+button, input[type="radio"] {
+    font-size: 16px;
+}
+
+.para {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Result screen styling */
+.result {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.result.deactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.result h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.result ol {
+    list-style-type: none;
+}
+
+.result ol li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    list-style-type: lower-roman;
+}
+
+.result ol li:last-child {
+    border-bottom: none;
+}
+
+.result ol li.correct {
+    color: #008000; /* Green color for correct answers */
+}
+
+.result ol li.incorrect {
+    color: #ff0000; /* Red color for incorrect answers */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    form, .result {
+        padding: 15px;
+    }
 }

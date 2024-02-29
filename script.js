@@ -254,6 +254,7 @@ function renderResult(randomQues) {
             // Check if the option is the correct answer
             if (optionKey === question.ans) {
                 resultOption.style.color = 'green'; // Set color to green for correct answer
+                resultOption.style.fontWeight = '700'
             }
 
             // Check if the option matches the selected answer
@@ -262,8 +263,10 @@ function renderResult(randomQues) {
                 // Highlight selected option
                 if(selectedOption !== question.ans){
                     resultOption.style.backgroundColor = 'red'; // Highlight incorrect option
+                    resultOption.style.borderRadius= '350px'
                 } else {
                     resultOption.style.backgroundColor = 'lightgreen'; // Highlight correct option
+                    resultOption.style.borderRadius= '350px'
                 }
             }
             
