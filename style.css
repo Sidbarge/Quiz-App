@@ -115,11 +115,12 @@ button, input[type="radio"] {
 .result h3 {
     font-size: 20px;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
 }
 
 .result ol {
     list-style-type: none;
+    padding: 0 20px;
 }
 
 .result ol li {

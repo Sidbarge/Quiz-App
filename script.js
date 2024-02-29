@@ -244,7 +244,7 @@ function renderResult(randomQues) {
         const options = question.options;
 
         // Set text content for question
-        resultQues.textContent = question.question;
+        resultQues.textContent = `${i+1}. ${question.question}`;
 
         // Loop through each option
         for (let optionKey in options) {
@@ -272,11 +272,14 @@ function renderResult(randomQues) {
             
             // Append option to the result list
             resultList.appendChild(resultOption);
+            
         }
-
+        
+        let lineBreak=document.createElement('br')
         // Append question and result list to the result screen
         resultScreen.appendChild(resultQues);
         resultScreen.appendChild(resultList);
+        resultScreen.appendChild(lineBreak);
     }
 }
 
